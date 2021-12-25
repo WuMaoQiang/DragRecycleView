@@ -1,4 +1,4 @@
-package com.haivo.editablerecyclerview
+package com.haivo.editablerecyclerview.adapter
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.blankj.utilcode.util.ActivityUtils
+import com.haivo.editablerecyclerview.R
 import com.haivo.editablerecyclerview.bean.AppBean
 import com.haivo.editablerecyclerview.databinding.ItemHomeAppsBinding
 

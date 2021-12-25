@@ -1,7 +1,8 @@
-package com.haivo.editablerecyclerview.room
+package com.haivo.editablerecyclerview.viewmodel
 
 import androidx.lifecycle.*
 import com.haivo.editablerecyclerview.bean.AppBean
+import com.haivo.editablerecyclerview.room.AppsRepository
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

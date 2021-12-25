@@ -8,10 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import com.blankj.utilcode.util.ActivityUtils
 import com.haivo.editablerecyclerview.MoreAppActivity
 import com.haivo.editablerecyclerview.R
-import com.haivo.editablerecyclerview.room.AppViewModelFactory
 import com.haivo.editablerecyclerview.room.AppsRepository
 import com.haivo.editablerecyclerview.room.AppsRoomDatabase
-import com.haivo.editablerecyclerview.room.AppsViewModel
+import com.haivo.editablerecyclerview.viewmodel.AppViewModelFactory
+import com.haivo.editablerecyclerview.viewmodel.AppsViewModel
 
 /**
  * 聚合页AppList的相关操作都在这里执行

@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.haivo.editablerecyclerview.adapter.CommonAppsAdapter;
 import com.haivo.editablerecyclerview.bean.AppBean;
-import com.haivo.editablerecyclerview.CommonAppsAdapter;
 import com.haivo.editablerecyclerview.R;
 
 import java.util.List;

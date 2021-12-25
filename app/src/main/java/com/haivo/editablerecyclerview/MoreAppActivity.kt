@@ -11,9 +11,12 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.blankj.utilcode.util.ToastUtils
+import com.haivo.editablerecyclerview.adapter.*
 import com.haivo.editablerecyclerview.bean.AppBean
 import com.haivo.editablerecyclerview.databinding.ActivityMoreAppsBinding
 import com.haivo.editablerecyclerview.room.*
+import com.haivo.editablerecyclerview.viewmodel.AppViewModelFactory
+import com.haivo.editablerecyclerview.viewmodel.AppsViewModel
 import java.util.*
 
 /**

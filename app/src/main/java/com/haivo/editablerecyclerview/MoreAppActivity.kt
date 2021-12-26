@@ -74,8 +74,9 @@ class MoreAppActivity : AppCompatActivity() {
                 }
                 commonAppsAdapter.notifyDataSetChanged()
 
+                enableDragItem(true)//编辑状态可拖拽调整位置
+
                 allAppsAdapter.isInEditing = true
-                enableDragItem(true)
                 allAppsAdapter.data.onEach { it2 ->
                     // 遍历列表1中元素, 如果与列表2图标相同, 则不显示+号
                     val isExistSameElement =
@@ -93,20 +94,25 @@ class MoreAppActivity : AppCompatActivity() {
                 viewModel.insertList(commonAppsAdapter.data)
                 commonAppsAdapter.notifyDataSetChanged()
 
+                enableDragItem(false)//默认状态不可拖拽调整位置
+
                 allAppsAdapter.isInEditing = false
-                enableDragItem(false)
                 allAppsAdapter.data.onEach { it2 -> it2.option = "3" }
                 allAppsAdapter.notifyDataSetChanged()
                 ToastUtils.showShort("保存成功")
             }
         }
         commonAppsAdapter.onRemoveBtnClickListener = object : OnRemoveBtnClickListener {
-            override fun onClick(view: View, appBean: AppBean) {
+            override fun onClick(view: View, appBean: AppBean, position: Int) {
                 // 找到列表2中与列表1被删除的图标相同的那个元素, 并将其重新变为可添加状态
                 if (commonAppsAdapter.data.size <= commonAppsAdapter.minCount) {
                     ToastUtils.showShort("最少添加四个")
                     return
                 }
+
+                commonAppsAdapter.data.removeAt(position)
+                commonAppsAdapter.notifyItemRemoved(position)
+
                 val theSameElementIndex =
                     allAppsAdapter.data.indexOfFirst { it.uid == appBean.uid }
                 if (theSameElementIndex < 0) return
@@ -126,9 +132,10 @@ class MoreAppActivity : AppCompatActivity() {
                     name = appBean.name
                     uid = appBean.uid
                 }
-                appBean.option = "3"
                 commonAppsAdapter.data.add(newAppBean)
                 commonAppsAdapter.notifyItemInserted(commonAppsAdapter.data.size)
+
+                appBean.option = "3"
                 allAppsAdapter.notifyDataSetChanged()
             }
         }

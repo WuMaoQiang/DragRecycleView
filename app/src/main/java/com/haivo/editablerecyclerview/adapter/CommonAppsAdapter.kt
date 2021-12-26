@@ -63,11 +63,7 @@ class CommonAppsAdapter : RecyclerView.Adapter<AppsHolder>() {
             "2" -> {
                 holder.binding.ivOption.visibility = View.VISIBLE
                 holder.binding.ivOption.setOnClickListener {
-                    onRemoveBtnClickListener?.onClick(it, appBean)
-                    if (data.size > 4) {
-                        data.removeAt(holder.adapterPosition)
-                        notifyItemRemoved(holder.adapterPosition)
-                    }
+                    onRemoveBtnClickListener?.onClick(it, appBean, position)
                 }
                 R.drawable.ic_remove
             }
@@ -115,5 +111,5 @@ interface DragOverListener {
 }
 
 interface OnRemoveBtnClickListener {
-    fun onClick(view: View, appBean: AppBean)
+    fun onClick(view: View, appBean: AppBean, position: Int)
 }

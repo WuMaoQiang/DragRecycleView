@@ -27,8 +27,6 @@ class AppListController private constructor(
     appsViewModel: AppsViewModel
 ) {
 
-    private var horizontalItemsLayout =
-        rootView.findViewById<HorizontalItemsLayout>(R.id.horizontal_items)
 
     companion object {
         fun inject(
@@ -47,6 +45,8 @@ class AppListController private constructor(
     }
 
     init {
+        val horizontalItemsLayout =
+            rootView.findViewById<HorizontalItemsLayout>(R.id.horizontal_items)
 
         horizontalItemsLayout.setOnLeftSlideListener {
             lifecycleOwner.startActivity(

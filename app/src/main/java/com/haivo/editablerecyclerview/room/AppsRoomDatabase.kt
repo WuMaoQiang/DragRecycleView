@@ -74,24 +74,40 @@ abstract class AppsRoomDatabase : RoomDatabase() {
 
             val commonApps = mutableListOf(
                 AppBean().apply {
+                    uid = "func_uid_000"
+                    name = "常用"
+                },
+                AppBean().apply {
                     uid = "func_uid_001"
-                    name = "人车查询"
+                    name = "人车查询1"
                 },
                 AppBean().apply {
                     uid = "func_uid_002"
-                    name = "访客登记"
+                    name = "访客登记2"
                 },
                 AppBean().apply {
                     uid = "func_uid_003"
-                    name = "事件上报"
+                    name = "事件上报3"
                 },
                 AppBean().apply {
                     uid = "func_uid_004"
-                    name = "通行证"
+                    name = "通行证4"
                 },
                 AppBean().apply {
                     uid = "func_uid_005"
-                    name = "云打印"
+                    name = "云打印5"
+                },
+                AppBean().apply {
+                    uid = "func_uid_006"
+                    name = "最多跑6"
+                },
+                AppBean().apply {
+                    uid = "func_uid_0000"
+                    name = "更多"
+                },
+                AppBean().apply {
+                    uid = "func_uid_007"
+                    name = "垃圾分类7"
                 })
             appDao.insertList(commonApps)
         }

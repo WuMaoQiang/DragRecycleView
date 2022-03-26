@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/channel_margin"
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <View
+        android:id="@+id/more_app_tag"
+        android:layout_width="6dp"
+        android:layout_height="24dp"
+        android:layout_below="@id/channel_margin"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="36dp"
+        android:background="@color/black" />
+
+    <TextView
+        android:id="@+id/channel_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/channel_margin"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/more_app_tag"
+        android:text="常用"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/channel_header_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/channel_header"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@id/channel_header"
+        android:text="(长按拖拽可以排序)"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="20dp" />
+</RelativeLayout>

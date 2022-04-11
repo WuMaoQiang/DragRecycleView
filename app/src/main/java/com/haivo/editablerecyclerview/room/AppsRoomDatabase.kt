@@ -74,10 +74,6 @@ abstract class AppsRoomDatabase : RoomDatabase() {
 
             val commonApps = mutableListOf(
                 AppBean().apply {
-                    uid = "func_uid_000"
-                    name = "常用"
-                },
-                AppBean().apply {
                     uid = "func_uid_001"
                     name = "人车查询1"
                 },
@@ -100,10 +96,6 @@ abstract class AppsRoomDatabase : RoomDatabase() {
                 AppBean().apply {
                     uid = "func_uid_006"
                     name = "最多跑6"
-                },
-                AppBean().apply {
-                    uid = "func_uid_0000"
-                    name = "更多"
                 },
                 AppBean().apply {
                     uid = "func_uid_007"

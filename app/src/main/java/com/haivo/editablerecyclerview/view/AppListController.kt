@@ -14,7 +14,7 @@ import com.haivo.editablerecyclerview.viewmodel.AppViewModelFactory
 import com.haivo.editablerecyclerview.viewmodel.AppsViewModel
 
 /**
- * 聚合页AppList的相关操作都在这里执行
+ * AppList的相关操作都在这里执行
  *
  * @author wumaoqiang
  * @date 2021/12/25 16:22

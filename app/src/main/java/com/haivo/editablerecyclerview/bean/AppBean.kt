@@ -15,15 +15,13 @@ import com.haivo.editablerecyclerview.R
  */
 @Entity(tableName = "apps_table")
 class AppBean() : Parcelable {
+
     var name: String = ""
 
     @PrimaryKey
     var uid: String = ""
     var iconRes: Int = -1
         get() = if (getFunctionDrawable(uid) != -1) getFunctionDrawable(uid) else R.drawable.photobadge
-
-    // 图标目前所处的显示状态
-    var option: String = "0"
 
     // 图标跳转
     var action: String? = ""
@@ -37,8 +35,6 @@ class AppBean() : Parcelable {
     }
 
     companion object {
-        // item当前的操作状态
-
         @JvmField
         val CREATOR = object : Parcelable.Creator<AppBean> {
             override fun createFromParcel(parcel: Parcel): AppBean {
@@ -75,14 +71,14 @@ class AppBean() : Parcelable {
             val map = mapOf(
                 // 应用部分
                 Pair("func_uid_001", "com.haivo.editablerecyclerview.QueryPersonCarActivity"),
-                Pair("func_uid_002", null),
-                Pair("func_uid_003", null),
-                Pair("func_uid_004", null),
-                Pair("func_uid_005", null),
-                Pair("func_uid_006", null),
-                Pair("func_uid_007", null),
-                Pair("func_uid_008", null),
-                Pair("func_uid_009", null),
+                Pair("func_uid_002", "com.haivo.editablerecyclerview.QueryPersonCarActivity"),
+                Pair("func_uid_003", "com.haivo.editablerecyclerview.QueryPersonCarActivity"),
+                Pair("func_uid_004", "com.haivo.editablerecyclerview.QueryPersonCarActivity"),
+                Pair("func_uid_005", "com.haivo.editablerecyclerview.QueryPersonCarActivity"),
+                Pair("func_uid_006", "com.haivo.editablerecyclerview.QueryPersonCarActivity"),
+                Pair("func_uid_007", "com.haivo.editablerecyclerview.QueryPersonCarActivity"),
+                Pair("func_uid_008", "com.haivo.editablerecyclerview.QueryPersonCarActivity"),
+                Pair("func_uid_009", "com.haivo.editablerecyclerview.QueryPersonCarActivity"),
                 Pair("func_uid_010", null),
                 Pair("func_uid_011", null),
                 Pair("func_uid_012", null),
